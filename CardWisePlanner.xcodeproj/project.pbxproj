@@ -12,6 +12,11 @@
 		1E0362082ECA956200EBAE6F /* HolidayCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0362042ECA956200EBAE6F /* HolidayCalendarService.swift */; };
 		1E0362092ECA956200EBAE6F /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0362032ECA956200EBAE6F /* ExchangeRateService.swift */; };
 		1E29477E2ECA939F00A12E1F /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29477D2ECA939F00A12E1F /* NetworkingTests.swift */; };
+		1EBEDF382ECA996D0058EA4F /* CalendarTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF372ECA996D0058EA4F /* CalendarTabView.swift */; };
+		1EBEDF3C2ECA997D0058EA4F /* AddCardSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF392ECA997D0058EA4F /* AddCardSheet.swift */; };
+		1EBEDF3D2ECA997D0058EA4F /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF3A2ECA997D0058EA4F /* CardDetailView.swift */; };
+		1EBEDF3E2ECA997D0058EA4F /* CardsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF3B2ECA997D0058EA4F /* CardsTabView.swift */; };
+		1EBEDF402ECA99860058EA4F /* InsightsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF3F2ECA99860058EA4F /* InsightsTabView.swift */; };
 		3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */; };
 		3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */; };
 		3D0B10C32C2CFA5A00F05D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */; };
@@ -65,6 +70,11 @@
 		1E0362032ECA956200EBAE6F /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
 		1E0362042ECA956200EBAE6F /* HolidayCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCalendarService.swift; sourceTree = "<group>"; };
 		1E29477D2ECA939F00A12E1F /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		1EBEDF372ECA996D0058EA4F /* CalendarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabView.swift; sourceTree = "<group>"; };
+		1EBEDF392ECA997D0058EA4F /* AddCardSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSheet.swift; sourceTree = "<group>"; };
+		1EBEDF3A2ECA997D0058EA4F /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		1EBEDF3B2ECA997D0058EA4F /* CardsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTabView.swift; sourceTree = "<group>"; };
+		1EBEDF3F2ECA99860058EA4F /* InsightsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 				1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */,
 				1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */,
 				1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */,
+				1EAA10002ECB1ECB00703EAA /* Views */,
 				1D0B20C22C2CFA5A00F05D4D /* Data */,
 				1D0B10BA2C2CFA5A00F05D4D /* Info.plist */,
 				1D0B10B42C2CFA5A00F05D4D /* LaunchScreen.storyboard */,
@@ -174,6 +185,42 @@
 				1E0362042ECA956200EBAE6F /* HolidayCalendarService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		1EAA10002ECB1ECB00703EAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EAA10062ECB1ECB00703EAA /* Cards */,
+				1EAA10072ECB1ECB00703EAA /* Insights */,
+				1EAA10082ECB1ECB00703EAA /* Calendar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EAA10062ECB1ECB00703EAA /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				1EBEDF392ECA997D0058EA4F /* AddCardSheet.swift */,
+				1EBEDF3A2ECA997D0058EA4F /* CardDetailView.swift */,
+				1EBEDF3B2ECA997D0058EA4F /* CardsTabView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		1EAA10072ECB1ECB00703EAA /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				1EBEDF3F2ECA99860058EA4F /* InsightsTabView.swift */,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		1EAA10082ECB1ECB00703EAA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				1EBEDF372ECA996D0058EA4F /* CalendarTabView.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,9 +354,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EBEDF382ECA996D0058EA4F /* CalendarTabView.swift in Sources */,
 				3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */,
 				3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */,
 				3D0B20D12C2CFA5A00F05D4D /* BillingEvent.swift in Sources */,
+				1EBEDF402ECA99860058EA4F /* InsightsTabView.swift in Sources */,
+				1EBEDF3C2ECA997D0058EA4F /* AddCardSheet.swift in Sources */,
+				1EBEDF3D2ECA997D0058EA4F /* CardDetailView.swift in Sources */,
+				1EBEDF3E2ECA997D0058EA4F /* CardsTabView.swift in Sources */,
 				1E0362062ECA956200EBAE6F /* APIClient.swift in Sources */,
 				1E0362072ECA956200EBAE6F /* CardOffersService.swift in Sources */,
 				1E0362082ECA956200EBAE6F /* HolidayCalendarService.swift in Sources */,
