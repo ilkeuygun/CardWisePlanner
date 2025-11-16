@@ -1,0 +1,33 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xcscmblueprint
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+Package.resolved
+
+# CocoaPods / Carthage placeholders
+Pods/
+Carthage/Build/
+
+# User settings
+*.xcuserdatad/
+xcuserdata/
+.DS_Store
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+
+# Asset catalogs
+*.orig
+
+# SwiftData
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
