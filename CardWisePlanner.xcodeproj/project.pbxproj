@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0362062ECA956200EBAE6F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0362012ECA956200EBAE6F /* APIClient.swift */; };
+		1E0362072ECA956200EBAE6F /* CardOffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0362022ECA956200EBAE6F /* CardOffersService.swift */; };
+		1E0362082ECA956200EBAE6F /* HolidayCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0362042ECA956200EBAE6F /* HolidayCalendarService.swift */; };
+		1E0362092ECA956200EBAE6F /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0362032ECA956200EBAE6F /* ExchangeRateService.swift */; };
+		1E29477E2ECA939F00A12E1F /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29477D2ECA939F00A12E1F /* NetworkingTests.swift */; };
 		3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */; };
 		3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */; };
 		3D0B10C32C2CFA5A00F05D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */; };
@@ -55,6 +60,11 @@
 		1D0B20D22C2CFA5A00F05D4D /* CreditCardAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardAccount.swift; sourceTree = "<group>"; };
 		1D0B20D32C2CFA5A00F05D4D /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		1D0B20D42C2CFA5A00F05D4D /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		1E0362012ECA956200EBAE6F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		1E0362022ECA956200EBAE6F /* CardOffersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOffersService.swift; sourceTree = "<group>"; };
+		1E0362032ECA956200EBAE6F /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
+		1E0362042ECA956200EBAE6F /* HolidayCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCalendarService.swift; sourceTree = "<group>"; };
+		1E29477D2ECA939F00A12E1F /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,13 +105,14 @@
 		1D0B10C42C2CFA5A00F05D4D /* CardWisePlanner */ = {
 			isa = PBXGroup;
 			children = (
+				1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */,
 				1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */,
 				1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */,
-				1D0B20C12C2CFA5A00F05D4D /* Models */,
 				1D0B20C22C2CFA5A00F05D4D /* Data */,
-				1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */,
-				1D0B10B42C2CFA5A00F05D4D /* LaunchScreen.storyboard */,
 				1D0B10BA2C2CFA5A00F05D4D /* Info.plist */,
+				1D0B10B42C2CFA5A00F05D4D /* LaunchScreen.storyboard */,
+				1D0B20C12C2CFA5A00F05D4D /* Models */,
+				1E0362052ECA956200EBAE6F /* Networking */,
 				1D0B10B52C2CFA5A00F05D4D /* Preview Assets.xcassets */,
 			);
 			path = CardWisePlanner;
@@ -110,6 +121,7 @@
 		1D0B10C52C2CFA5A00F05D4D /* CardWisePlannerTests */ = {
 			isa = PBXGroup;
 			children = (
+				1E29477D2ECA939F00A12E1F /* NetworkingTests.swift */,
 				1D0B10B62C2CFA5A00F05D4D /* CardWisePlannerTests.swift */,
 				1D0B10B72C2CFA5A00F05D4D /* Info.plist */,
 			);
@@ -151,6 +163,17 @@
 				1D0B20D42C2CFA5A00F05D4D /* PreviewData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		1E0362052ECA956200EBAE6F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1E0362012ECA956200EBAE6F /* APIClient.swift */,
+				1E0362022ECA956200EBAE6F /* CardOffersService.swift */,
+				1E0362032ECA956200EBAE6F /* ExchangeRateService.swift */,
+				1E0362042ECA956200EBAE6F /* HolidayCalendarService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +310,10 @@
 				3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */,
 				3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */,
 				3D0B20D12C2CFA5A00F05D4D /* BillingEvent.swift in Sources */,
+				1E0362062ECA956200EBAE6F /* APIClient.swift in Sources */,
+				1E0362072ECA956200EBAE6F /* CardOffersService.swift in Sources */,
+				1E0362082ECA956200EBAE6F /* HolidayCalendarService.swift in Sources */,
+				1E0362092ECA956200EBAE6F /* ExchangeRateService.swift in Sources */,
 				3D0B20D22C2CFA5A00F05D4D /* CreditCardAccount.swift in Sources */,
 				3D0B20D32C2CFA5A00F05D4D /* CardRepository.swift in Sources */,
 				3D0B20D42C2CFA5A00F05D4D /* PreviewData.swift in Sources */,
@@ -298,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D0B10C62C2CFA5A00F05D4D /* CardWisePlannerTests.swift in Sources */,
+				1E29477E2ECA939F00A12E1F /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
