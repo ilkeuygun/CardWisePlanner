@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+	3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */; };
+	3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */; };
+	3D0B10C32C2CFA5A00F05D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */; };
+	3D0B10C42C2CFA5A00F05D4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0B10B42C2CFA5A00F05D4D /* LaunchScreen.storyboard */; };
+	3D0B10C52C2CFA5A00F05D4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0B10B52C2CFA5A00F05D4D /* Preview Assets.xcassets */; };
+	3D0B10C62C2CFA5A00F05D4D /* CardWisePlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B62C2CFA5A00F05D4D /* CardWisePlannerTests.swift */; };
+	3D0B10C72C2CFA5A00F05D4D /* CardWisePlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B82C2CFA5A00F05D4D /* CardWisePlannerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+	1D0B10DD2C2CFA5A00F05D4D /* PBXContainerItemProxy */ = {
+		isa = PBXContainerItemProxy;
+		containerPortal = 1D0B10C02C2CFA5A00F05D4D /* Project object */;
+		proxyType = 1;
+		remoteGlobalIDString = 1D0B10D12C2CFA5A00F05D4D;
+		remoteInfo = CardWisePlanner;
+	};
+	1D0B10DF2C2CFA5A00F05D4D /* PBXContainerItemProxy */ = {
+		isa = PBXContainerItemProxy;
+		containerPortal = 1D0B10C02C2CFA5A00F05D4D /* Project object */;
+		proxyType = 1;
+		remoteGlobalIDString = 1D0B10D12C2CFA5A00F05D4D;
+		remoteInfo = CardWisePlanner;
+	};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+	1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWisePlannerApp.swift; sourceTree = "<group>"; };
+	1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+	1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+	1D0B10B42C2CFA5A00F05D4D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+	1D0B10B52C2CFA5A00F05D4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
+	1D0B10B62C2CFA5A00F05D4D /* CardWisePlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWisePlannerTests.swift; sourceTree = "<group>"; };
+	1D0B10B72C2CFA5A00F05D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+	1D0B10B82C2CFA5A00F05D4D /* CardWisePlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWisePlannerUITests.swift; sourceTree = "<group>"; };
+	1D0B10B92C2CFA5A00F05D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+	1D0B10BA2C2CFA5A00F05D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+	1D0B10E12C2CFA5A00F05D4D /* CardWisePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWisePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+	1D0B10E22C2CFA5A00F05D4D /* CardWisePlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardWisePlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+	1D0B10E32C2CFA5A00F05D4D /* CardWisePlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardWisePlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+	1D0B10D32C2CFA5A00F05D4D /* Frameworks */ = {
+		isa = PBXFrameworksBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+	1D0B10D72C2CFA5A00F05D4D /* Frameworks */ = {
+		isa = PBXFrameworksBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+	1D0B10DB2C2CFA5A00F05D4D /* Frameworks */ = {
+		isa = PBXFrameworksBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+	1D0B10C32C2CFA5A00F05D4D /* Products */ = {
+		isa = PBXGroup;
+		children = (
+			1D0B10E12C2CFA5A00F05D4D /* CardWisePlanner.app */,
+			1D0B10E22C2CFA5A00F05D4D /* CardWisePlannerTests.xctest */,
+			1D0B10E32C2CFA5A00F05D4D /* CardWisePlannerUITests.xctest */,
+		);
+		name = Products;
+		sourceTree = "<group>";
+	};
+	1D0B10C42C2CFA5A00F05D4D /* CardWisePlanner */ = {
+		isa = PBXGroup;
+		children = (
+			1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */,
+			1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */,
+			1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */,
+			1D0B10B42C2CFA5A00F05D4D /* LaunchScreen.storyboard */,
+			1D0B10BA2C2CFA5A00F05D4D /* Info.plist */,
+			1D0B10B52C2CFA5A00F05D4D /* Preview Assets.xcassets */,
+		);
+		path = CardWisePlanner;
+		sourceTree = "<group>";
+	};
+	1D0B10C52C2CFA5A00F05D4D /* CardWisePlannerTests */ = {
+		isa = PBXGroup;
+		children = (
+			1D0B10B62C2CFA5A00F05D4D /* CardWisePlannerTests.swift */,
+			1D0B10B72C2CFA5A00F05D4D /* Info.plist */,
+		);
+		path = CardWisePlannerTests;
+		sourceTree = "<group>";
+	};
+	1D0B10C62C2CFA5A00F05D4D /* CardWisePlannerUITests */ = {
+		isa = PBXGroup;
+		children = (
+			1D0B10B82C2CFA5A00F05D4D /* CardWisePlannerUITests.swift */,
+			1D0B10B92C2CFA5A00F05D4D /* Info.plist */,
+		);
+		path = CardWisePlannerUITests;
+		sourceTree = "<group>";
+	};
+	1D0B10C72C2CFA5A00F05D4D = {
+		isa = PBXGroup;
+		children = (
+			1D0B10C42C2CFA5A00F05D4D /* CardWisePlanner */,
+			1D0B10C52C2CFA5A00F05D4D /* CardWisePlannerTests */,
+			1D0B10C62C2CFA5A00F05D4D /* CardWisePlannerUITests */,
+			1D0B10C32C2CFA5A00F05D4D /* Products */,
+		);
+		sourceTree = "<group>";
+	};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+	1D0B10D12C2CFA5A00F05D4D /* CardWisePlanner */ = {
+		isa = PBXNativeTarget;
+		buildConfigurationList = 1D0B10F42C2CFA5A00F05D4D /* Build configuration list for PBXNativeTarget "CardWisePlanner" */;
+		buildPhases = (
+			1D0B10D22C2CFA5A00F05D4D /* Sources */,
+			1D0B10D32C2CFA5A00F05D4D /* Frameworks */,
+			1D0B10D42C2CFA5A00F05D4D /* Resources */,
+		);
+		buildRules = (
+		);
+		dependencies = (
+		);
+		name = CardWisePlanner;
+		productName = CardWisePlanner;
+		productReference = 1D0B10E12C2CFA5A00F05D4D /* CardWisePlanner.app */;
+		productType = "com.apple.product-type.application";
+	};
+	1D0B10D52C2CFA5A00F05D4D /* CardWisePlannerTests */ = {
+		isa = PBXNativeTarget;
+		buildConfigurationList = 1D0B10F72C2CFA5A00F05D4D /* Build configuration list for PBXNativeTarget "CardWisePlannerTests" */;
+		buildPhases = (
+			1D0B10D62C2CFA5A00F05D4D /* Sources */,
+			1D0B10D72C2CFA5A00F05D4D /* Frameworks */,
+			1D0B10D82C2CFA5A00F05D4D /* Resources */,
+		);
+		buildRules = (
+		);
+		dependencies = (
+			1D0B10DE2C2CFA5A00F05D4D /* PBXTargetDependency */,
+		);
+		name = CardWisePlannerTests;
+		productName = CardWisePlannerTests;
+		productReference = 1D0B10E22C2CFA5A00F05D4D /* CardWisePlannerTests.xctest */;
+		productType = "com.apple.product-type.bundle.unit-test";
+	};
+	1D0B10D92C2CFA5A00F05D4D /* CardWisePlannerUITests */ = {
+		isa = PBXNativeTarget;
+		buildConfigurationList = 1D0B10FA2C2CFA5A00F05D4D /* Build configuration list for PBXNativeTarget "CardWisePlannerUITests" */;
+		buildPhases = (
+			1D0B10DA2C2CFA5A00F05D4D /* Sources */,
+			1D0B10DB2C2CFA5A00F05D4D /* Frameworks */,
+			1D0B10DC2C2CFA5A00F05D4D /* Resources */,
+		);
+		buildRules = (
+		);
+		dependencies = (
+			1D0B10E02C2CFA5A00F05D4D /* PBXTargetDependency */,
+		);
+		name = CardWisePlannerUITests;
+		productName = CardWisePlannerUITests;
+		productReference = 1D0B10E32C2CFA5A00F05D4D /* CardWisePlannerUITests.xctest */;
+		productType = "com.apple.product-type.bundle.ui-testing";
+	};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+	1D0B10C02C2CFA5A00F05D4D /* Project object */ = {
+		isa = PBXProject;
+		attributes = {
+			BuildIndependentTargetsInParallel = YES;
+			LastSwiftUpdateCheck = 1510;
+			LastUpgradeCheck = 1510;
+			TargetAttributes = {
+				1D0B10D12C2CFA5A00F05D4D = {
+					CreatedOnToolsVersion = 15.1;
+				};
+				1D0B10D52C2CFA5A00F05D4D = {
+					CreatedOnToolsVersion = 15.1;
+					TestTargetID = 1D0B10D12C2CFA5A00F05D4D;
+				};
+				1D0B10D92C2CFA5A00F05D4D = {
+					CreatedOnToolsVersion = 15.1;
+					TestTargetID = 1D0B10D12C2CFA5A00F05D4D;
+				};
+			};
+		};
+		buildConfigurationList = 1D0B10F12C2CFA5A00F05D4D /* Build configuration list for PBXProject "CardWisePlanner" */;
+		compatibilityVersion = "Xcode 15.0";
+		developmentRegion = en;
+		hasScannedForEncodings = 0;
+		knownRegions = (
+			en,
+			Base,
+		);
+		mainGroup = 1D0B10C72C2CFA5A00F05D4D;
+		productRefGroup = 1D0B10C32C2CFA5A00F05D4D /* Products */;
+		projectDirPath = "";
+		projectRoot = "";
+		targets = (
+			1D0B10D12C2CFA5A00F05D4D /* CardWisePlanner */,
+			1D0B10D52C2CFA5A00F05D4D /* CardWisePlannerTests */,
+			1D0B10D92C2CFA5A00F05D4D /* CardWisePlannerUITests */,
+		);
+	};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+	1D0B10D42C2CFA5A00F05D4D /* Resources */ = {
+		isa = PBXResourcesBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+			3D0B10C32C2CFA5A00F05D4D /* Assets.xcassets in Resources */,
+			3D0B10C42C2CFA5A00F05D4D /* LaunchScreen.storyboard in Resources */,
+			3D0B10C52C2CFA5A00F05D4D /* Preview Assets.xcassets in Resources */,
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+	1D0B10D82C2CFA5A00F05D4D /* Resources */ = {
+		isa = PBXResourcesBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+	1D0B10DC2C2CFA5A00F05D4D /* Resources */ = {
+		isa = PBXResourcesBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+	1D0B10D22C2CFA5A00F05D4D /* Sources */ = {
+		isa = PBXSourcesBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+			3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */,
+			3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */,
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+	1D0B10D62C2CFA5A00F05D4D /* Sources */ = {
+		isa = PBXSourcesBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+			3D0B10C62C2CFA5A00F05D4D /* CardWisePlannerTests.swift in Sources */,
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+	1D0B10DA2C2CFA5A00F05D4D /* Sources */ = {
+		isa = PBXSourcesBuildPhase;
+		buildActionMask = 2147483647;
+		files = (
+			3D0B10C72C2CFA5A00F05D4D /* CardWisePlannerUITests.swift in Sources */,
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+	1D0B10DE2C2CFA5A00F05D4D /* PBXTargetDependency */ = {
+		isa = PBXTargetDependency;
+		target = 1D0B10D12C2CFA5A00F05D4D /* CardWisePlanner */;
+		targetProxy = 1D0B10DD2C2CFA5A00F05D4D /* PBXContainerItemProxy */;
+	};
+	1D0B10E02C2CFA5A00F05D4D /* PBXTargetDependency */ = {
+		isa = PBXTargetDependency;
+		target = 1D0B10D12C2CFA5A00F05D4D /* CardWisePlanner */;
+		targetProxy = 1D0B10DF2C2CFA5A00F05D4D /* PBXContainerItemProxy */;
+	};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+	1D0B10F22C2CFA5A00F05D4D /* Debug */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			ALWAYS_SEARCH_USER_PATHS = NO;
+			CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+			CLANG_ENABLE_MODULES = YES;
+			CLANG_ENABLE_OBJC_ARC = YES;
+			CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+			CLANG_WARN_BOOL_CONVERSION = YES;
+			CLANG_WARN_COMMA = YES;
+			CLANG_WARN_CONSTANT_CONVERSION = YES;
+			CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+			CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+			CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+			CLANG_WARN_EMPTY_BODY = YES;
+			CLANG_WARN_ENUM_CONVERSION = YES;
+			CLANG_WARN_INFINITE_RECURSION = YES;
+			CLANG_WARN_INT_CONVERSION = YES;
+			CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+			CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+			CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+			CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+			CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+			CLANG_WARN_STRICT_PROTOTYPES = YES;
+			CLANG_WARN_SUSPICIOUS_MOVE = YES;
+			CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+			CODE_SIGN_STYLE = Automatic;
+			COPY_PHASE_STRIP = NO;
+			DEBUG_INFORMATION_FORMAT = dwarf;
+			ENABLE_STRICT_OBJC_MSGSEND = YES;
+			ENABLE_TESTABILITY = YES;
+			GCC_C_LANGUAGE_STANDARD = gnu17;
+			GCC_DYNAMIC_NO_PIC = NO;
+			GCC_NO_COMMON_BLOCKS = YES;
+			GCC_PREPROCESSOR_DEFINITIONS = (
+				"DEBUG=1",
+				"$(inherited)",
+			);
+			GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+			GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+			GCC_WARN_UNDECLARED_SELECTOR = YES;
+			GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+			GCC_WARN_UNUSED_FUNCTION = YES;
+			GCC_WARN_UNUSED_VARIABLE = YES;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+			ONLY_ACTIVE_ARCH = YES;
+			SDKROOT = iphoneos;
+			SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			TARGETED_DEVICE_FAMILY = "1,2";
+		};
+		name = Debug;
+	};
+	1D0B10F32C2CFA5A00F05D4D /* Release */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			ALWAYS_SEARCH_USER_PATHS = NO;
+			CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+			CLANG_ENABLE_MODULES = YES;
+			CLANG_ENABLE_OBJC_ARC = YES;
+			CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+			CLANG_WARN_BOOL_CONVERSION = YES;
+			CLANG_WARN_COMMA = YES;
+			CLANG_WARN_CONSTANT_CONVERSION = YES;
+			CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+			CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+			CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+			CLANG_WARN_EMPTY_BODY = YES;
+			CLANG_WARN_ENUM_CONVERSION = YES;
+			CLANG_WARN_INFINITE_RECURSION = YES;
+			CLANG_WARN_INT_CONVERSION = YES;
+			CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+			CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+			CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+			CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+			CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+			CLANG_WARN_STRICT_PROTOTYPES = YES;
+			CLANG_WARN_SUSPICIOUS_MOVE = YES;
+			CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+			CODE_SIGN_STYLE = Automatic;
+			COPY_PHASE_STRIP = NO;
+			DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			ENABLE_STRICT_OBJC_MSGSEND = YES;
+			GCC_C_LANGUAGE_STANDARD = gnu17;
+			GCC_NO_COMMON_BLOCKS = YES;
+			GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+			GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+			GCC_WARN_UNDECLARED_SELECTOR = YES;
+			GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+			GCC_WARN_UNUSED_FUNCTION = YES;
+			GCC_WARN_UNUSED_VARIABLE = YES;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			MTL_ENABLE_DEBUG_INFO = NO;
+			SDKROOT = iphoneos;
+			SWIFT_COMPILATION_MODE = wholemodule;
+			SWIFT_OPTIMIZATION_LEVEL = "-O";
+			TARGETED_DEVICE_FAMILY = "1,2";
+		};
+		name = Release;
+	};
+	1D0B10F52C2CFA5A00F05D4D /* Debug */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+			ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+			CODE_SIGN_STYLE = Automatic;
+			CURRENT_PROJECT_VERSION = 1;
+			DEVELOPMENT_TEAM = "";
+			ENABLE_PREVIEWS = YES;
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = CardWisePlanner/Info.plist;
+			INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+			INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+			INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+			INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+			MARKETING_VERSION = 1.0;
+			PRODUCT_BUNDLE_IDENTIFIER = com.cardwiseplanner.app;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos;
+			SWIFT_EMIT_LOC_STRINGS = YES;
+			SWIFT_VERSION = 5.0;
+			TARGETED_DEVICE_FAMILY = "1,2";
+		};
+		name = Debug;
+	};
+	1D0B10F62C2CFA5A00F05D4D /* Release */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+			ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+			CODE_SIGN_STYLE = Automatic;
+			CURRENT_PROJECT_VERSION = 1;
+			DEVELOPMENT_TEAM = "";
+			ENABLE_PREVIEWS = YES;
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = CardWisePlanner/Info.plist;
+			INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+			INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+			INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+			INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+			MARKETING_VERSION = 1.0;
+			PRODUCT_BUNDLE_IDENTIFIER = com.cardwiseplanner.app;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos;
+			SWIFT_EMIT_LOC_STRINGS = YES;
+			SWIFT_VERSION = 5.0;
+			TARGETED_DEVICE_FAMILY = "1,2";
+		};
+		name = Release;
+	};
+	1D0B10F82C2CFA5A00F05D4D /* Debug */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			DEVELOPMENT_TEAM = "";
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = CardWisePlannerTests/Info.plist;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+			PRODUCT_BUNDLE_IDENTIFIER = com.cardwiseplanner.tests;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos;
+			SWIFT_VERSION = 5.0;
+			TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardWisePlanner.app/CardWisePlanner";
+		};
+		name = Debug;
+	};
+	1D0B10F92C2CFA5A00F05D4D /* Release */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			DEVELOPMENT_TEAM = "";
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = CardWisePlannerTests/Info.plist;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+			PRODUCT_BUNDLE_IDENTIFIER = com.cardwiseplanner.tests;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos;
+			SWIFT_VERSION = 5.0;
+			TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardWisePlanner.app/CardWisePlanner";
+		};
+		name = Release;
+	};
+	1D0B10FB2C2CFA5A00F05D4D /* Debug */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			DEVELOPMENT_TEAM = "";
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = CardWisePlannerUITests/Info.plist;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+			PRODUCT_BUNDLE_IDENTIFIER = com.cardwiseplanner.uitests;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos;
+			SWIFT_VERSION = 5.0;
+			TEST_TARGET_NAME = CardWisePlanner;
+		};
+		name = Debug;
+	};
+	1D0B10FC2C2CFA5A00F05D4D /* Release */ = {
+		isa = XCBuildConfiguration;
+		buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			DEVELOPMENT_TEAM = "";
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = CardWisePlannerUITests/Info.plist;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+			PRODUCT_BUNDLE_IDENTIFIER = com.cardwiseplanner.uitests;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos;
+			SWIFT_VERSION = 5.0;
+			TEST_TARGET_NAME = CardWisePlanner;
+		};
+		name = Release;
+	};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+	1D0B10F12C2CFA5A00F05D4D /* Build configuration list for PBXProject "CardWisePlanner" */ = {
+		isa = XCConfigurationList;
+		buildConfigurations = (
+			1D0B10F22C2CFA5A00F05D4D /* Debug */,
+			1D0B10F32C2CFA5A00F05D4D /* Release */,
+		);
+		defaultConfigurationIsVisible = 0;
+		defaultConfigurationName = Release;
+	};
+	1D0B10F42C2CFA5A00F05D4D /* Build configuration list for PBXNativeTarget "CardWisePlanner" */ = {
+		isa = XCConfigurationList;
+		buildConfigurations = (
+			1D0B10F52C2CFA5A00F05D4D /* Debug */,
+			1D0B10F62C2CFA5A00F05D4D /* Release */,
+		);
+		defaultConfigurationIsVisible = 0;
+		defaultConfigurationName = Release;
+	};
+	1D0B10F72C2CFA5A00F05D4D /* Build configuration list for PBXNativeTarget "CardWisePlannerTests" */ = {
+		isa = XCConfigurationList;
+		buildConfigurations = (
+			1D0B10F82C2CFA5A00F05D4D /* Debug */,
+			1D0B10F92C2CFA5A00F05D4D /* Release */,
+		);
+		defaultConfigurationIsVisible = 0;
+		defaultConfigurationName = Release;
+	};
+	1D0B10FA2C2CFA5A00F05D4D /* Build configuration list for PBXNativeTarget "CardWisePlannerUITests" */ = {
+		isa = XCConfigurationList;
+		buildConfigurations = (
+			1D0B10FB2C2CFA5A00F05D4D /* Debug */,
+			1D0B10FC2C2CFA5A00F05D4D /* Release */,
+		);
+		defaultConfigurationIsVisible = 0;
+		defaultConfigurationName = Release;
+	};
+/* End XCConfigurationList section */
+
+};
+	rootObject = 1D0B10C02C2CFA5A00F05D4D /* Project object */;
+}
