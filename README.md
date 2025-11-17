@@ -59,3 +59,7 @@ Financial planning companion that optimizes revolving-credit usage windows, guid
 2. Scaffold SwiftUI project with launch assets, icon set, and sample data.
 3. Iterate on networking mocks + persistence before integrating full UI polish.
 
+
+## Testing & QA
+- Automated: `xcodebuild -scheme CardWisePlanner -destination 'platform=iOS Simulator,name=iPhone 15' test`
+- Manual scenarios and accessibility checklist are documented in [`TESTING.md`](TESTING.md).
