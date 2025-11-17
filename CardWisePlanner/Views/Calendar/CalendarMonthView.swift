@@ -36,8 +36,12 @@ struct CalendarMonthView: View {
         return buffer
     }
 
+    private var monthEvents: [BillingEvent] {
+        events.filter { calendar.isDate($0.date, equalTo: currentMonth, toGranularity: .month) }
+    }
+
     private var eventsByDay: [Date: [BillingEvent]] {
-        Dictionary(grouping: events) { event in
+        Dictionary(grouping: monthEvents) { event in
             calendar.startOfDay(for: event.date)
         }
     }

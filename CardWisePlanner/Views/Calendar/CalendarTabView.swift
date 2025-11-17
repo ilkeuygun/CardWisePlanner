@@ -4,6 +4,8 @@ struct CalendarTabView: View {
     @EnvironmentObject private var repository: CardRepository
     @StateObject private var viewModel = CalendarViewModel()
     @State private var selectedDate: Date? = nil
+    @State private var showNewNoteSheet = false
+    @State private var editingEvent: BillingEvent?
 
     private var monthStart: Date {
         let comps = Calendar.current.dateComponents([.year, .month], from: Date())
@@ -25,13 +27,18 @@ struct CalendarTabView: View {
                 if !eventsForSelectedDay.isEmpty {
                     Section(header: Text("Events on \(selectedDate!, formatter: Self.dateFormatter)")) {
                         ForEach(eventsForSelectedDay) { event in
-                            VStack(alignment: .leading) {
-                                Text(event.type.displayName).bold()
-                                if !event.note.isEmpty {
-                                    Text(event.note)
-                                        .font(.footnote)
-                                        .foregroundStyle(.secondary)
+                            Button {
+                                editingEvent = event
+                            } label: {
+                                VStack(alignment: .leading) {
+                                    Text(event.type.displayName).bold()
+                                    if !event.note.isEmpty {
+                                        Text(event.note)
+                                            .font(.footnote)
+                                            .foregroundStyle(.secondary)
+                                    }
                                 }
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
                     }
@@ -40,16 +47,23 @@ struct CalendarTabView: View {
                 if !viewModel.events.isEmpty {
                     Section("Upcoming events") {
                         ForEach(viewModel.events.prefix(10)) { event in
-                            VStack(alignment: .leading) {
-                                Text(event.type.displayName).bold()
-                                Text(event.date, style: .date)
-                                    .foregroundStyle(.secondary)
-                                if !event.note.isEmpty {
-                                    Text(event.note)
-                                        .font(.footnote)
+                            Button {
+                                editingEvent = event
+                                selectedDate = event.date
+                            } label: {
+                                VStack(alignment: .leading) {
+                                    Text(event.type.displayName).bold()
+                                    Text(event.date, style: .date)
                                         .foregroundStyle(.secondary)
+                                    if !event.note.isEmpty {
+                                        Text(event.note)
+                                            .font(.footnote)
+                                            .foregroundStyle(.secondary)
+                                    }
                                 }
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             }
+                            .buttonStyle(.plain)
                         }
                     }
                 }
@@ -74,15 +88,41 @@ struct CalendarTabView: View {
                 }
             }
             .navigationTitle("Calendar")
-            .task { await refreshData() }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        if selectedDate == nil { selectedDate = Date() }
+                        showNewNoteSheet = true
+                    } label: {
+                        Image(systemName: "plus.circle")
+                    }
+                }
+            }
+            .task {
+                viewModel.bind(repository: repository)
+                await refreshData()
+            }
             .onChange(of: repository.cards) { cards in
                 viewModel.updateCards(cards)
+            }
+            .sheet(isPresented: $showNewNoteSheet) {
+                CalendarNoteSheet(date: selectedDate ?? Date(), mode: .add(defaultType: .customNote)) { type, note in
+                    Task {
+                        await viewModel.saveNote(for: selectedDate ?? Date(), existingEvent: nil, type: type, note: note)
+                    }
+                }
+            }
+            .sheet(item: $editingEvent) { event in
+                CalendarNoteSheet(date: event.date, mode: .edit(event: event)) { type, note in
+                    Task {
+                        await viewModel.saveNote(for: event.date, existingEvent: event, type: type, note: note)
+                    }
+                }
             }
         }
     }
 
     private func refreshData() async {
-        viewModel.updateCards(repository.cards)
         let year = Calendar.current.component(.year, from: Date())
         await viewModel.refreshHolidays(countryCode: "US", year: year)
     }

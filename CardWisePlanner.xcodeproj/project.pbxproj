@@ -17,8 +17,6 @@
 		1EBEDF3D2ECA997D0058EA4F /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF3A2ECA997D0058EA4F /* CardDetailView.swift */; };
 		1EBEDF3E2ECA997D0058EA4F /* CardsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF3B2ECA997D0058EA4F /* CardsTabView.swift */; };
 		1EBEDF402ECA99860058EA4F /* InsightsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF3F2ECA99860058EA4F /* InsightsTabView.swift */; };
-		1EC134F42ECAA2B3002B2F70 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4B2ECAA4EB0058EA4F /* CalendarViewModel.swift */; };
-		1EC134F52ECAA2B9002B2F70 /* InsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4A2ECAA4EB0058EA4F /* InsightsViewModel.swift */; };
 		3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */; };
 		3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */; };
 		3D0B10C32C2CFA5A00F05D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0B10B32C2CFA5A00F05D4D /* Assets.xcassets */; };
@@ -33,6 +31,7 @@
 		1EBEDF4D2ECAA9F10058EA4F /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4C2ECAA9F10058EA4F /* CalendarMonthView.swift */; };
 		1EBEDF4E2ECAA4EB0058EA4F /* InsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4A2ECAA4EB0058EA4F /* InsightsViewModel.swift */; };
 		1EBEDF4F2ECAA4EB0058EA4F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4B2ECAA4EB0058EA4F /* CalendarViewModel.swift */; };
+		1EBEDF4F2ECAAC510058EA4F /* CalendarNoteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4E2ECAAC510058EA4F /* CalendarNoteSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +80,7 @@
 		1EBEDF3A2ECA997D0058EA4F /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		1EBEDF3B2ECA997D0058EA4F /* CardsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTabView.swift; sourceTree = "<group>"; };
 		1EBEDF3F2ECA99860058EA4F /* InsightsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsTabView.swift; sourceTree = "<group>"; };
+		1EBEDF4E2ECAAC510058EA4F /* CalendarNoteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarNoteSheet.swift; sourceTree = "<group>"; };
 		1EBEDF4A2ECAA4EB0058EA4F /* InsightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewModel.swift; sourceTree = "<group>"; };
 		1EBEDF4B2ECAA4EB0058EA4F /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +90,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
+			1EBEDF382ECA996D0058EA4F /* CalendarTabView.swift in Sources */,
+			1EBEDF4D2ECAA9F10058EA4F /* CalendarMonthView.swift in Sources */,
+			1EBEDF4F2ECAAC510058EA4F /* CalendarNoteSheet.swift in Sources */,
+			1EBEDF3C2ECA997D0058EA4F /* AddCardSheet.swift in Sources */,
+			1EBEDF3D2ECA997D0058EA4F /* CardDetailView.swift in Sources */,
+			1EBEDF3E2ECA997D0058EA4F /* CardsTabView.swift in Sources */,
+			1EBEDF402ECA99860058EA4F /* InsightsTabView.swift in Sources */,
+			1EBEDF4E2ECAA4EB0058EA4F /* InsightsViewModel.swift in Sources */,
+			1EBEDF4F2ECAA4EB0058EA4F /* CalendarViewModel.swift in Sources */,
+			3D0B10C22C2CFA5A00F05D4D /* ContentView.swift in Sources */,
+			3D0B10C12C2CFA5A00F05D4D /* CardWisePlannerApp.swift in Sources */,
+			3D0B20D12C2CFA5A00F05D4D /* BillingEvent.swift in Sources */,
+			1E0362062ECA956200EBAE6F /* APIClient.swift in Sources */,
+			1E0362072ECA956200EBAE6F /* CardOffersService.swift in Sources */,
+			1E0362082ECA956200EBAE6F /* HolidayCalendarService.swift in Sources */,
+			1E0362092ECA956200EBAE6F /* ExchangeRateService.swift in Sources */,
+			3D0B20D22C2CFA5A00F05D4D /* CreditCardAccount.swift in Sources */,
+			3D0B20D32C2CFA5A00F05D4D /* CardRepository.swift in Sources */,
+			3D0B20D42C2CFA5A00F05D4D /* PreviewData.swift in Sources */,
+		);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1D0B10D72C2CFA5A00F05D4D /* Frameworks */ = {
@@ -239,6 +258,7 @@
 			children = (
 				1EBEDF372ECA996D0058EA4F /* CalendarTabView.swift */,
 				1EBEDF4C2ECAA9F10058EA4F /* CalendarMonthView.swift */,
+				1EBEDF4E2ECAAC510058EA4F /* CalendarNoteSheet.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -393,6 +413,7 @@
 				1EBEDF3D2ECA997D0058EA4F /* CardDetailView.swift in Sources */,
 				1EBEDF3E2ECA997D0058EA4F /* CardsTabView.swift in Sources */,
 			1EBEDF4D2ECAA9F10058EA4F /* CalendarMonthView.swift in Sources */,
+			1EBEDF4F2ECAAC510058EA4F /* CalendarNoteSheet.swift in Sources */,
 			1EBEDF4E2ECAA4EB0058EA4F /* InsightsViewModel.swift in Sources */,
 			1EBEDF4F2ECAA4EB0058EA4F /* CalendarViewModel.swift in Sources */,
 				1EC134F42ECAA2B3002B2F70 /* CalendarViewModel.swift in Sources */,

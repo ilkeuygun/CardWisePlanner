@@ -78,15 +78,25 @@ final class CardRepository: ObservableObject {
 
     @discardableResult
     func addEvent(
-        to card: CreditCardAccount,
+        to card: CreditCardAccount?,
         date: Date,
         type: BillingEventType,
         note: String = ""
     ) throws -> BillingEvent {
         let event = BillingEvent(date: date, type: type, note: note, card: card)
-        card.events.append(event)
+        if let card {
+            card.events.append(event)
+        } else {
+            context.insert(event)
+        }
         try saveChanges()
         return event
+    }
+
+    func update(event: BillingEvent, note: String) throws {
+        event.note = note
+        event.updatedAt = .now
+        try saveChanges()
     }
 
     private func seedIfNeeded() {
