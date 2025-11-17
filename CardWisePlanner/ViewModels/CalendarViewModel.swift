@@ -42,7 +42,9 @@ final class CalendarViewModel: ObservableObject {
             if let existingEvent {
                 try repository.update(event: existingEvent, note: note)
             } else {
-                let targetCard = repository.cards.first
+                guard let targetCard = repository.cards.first else {
+                    throw CardRepositoryError.persistenceFailed(NSError(domain: "CardWise", code: -1, userInfo: [NSLocalizedDescriptionKey: "Add a card first. "]))
+                }
                 _ = try repository.addEvent(to: targetCard, date: date, type: type, note: note)
             }
             updateCards(repository.cards)

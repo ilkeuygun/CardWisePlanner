@@ -6,6 +6,9 @@ struct CardsTabView: View {
     @State private var selectedCard: CreditCardAccount?
 
     private var cards: [CreditCardAccount] { repository.cards }
+    private var recommendedCardID: UUID? {
+        cards.max { $0.daysUntilStatementClose() < $1.daysUntilStatementClose() }?.id
+    }
 
     var body: some View {
         NavigationStack {
@@ -18,16 +21,22 @@ struct CardsTabView: View {
                         icon: "creditcard", caption: "Tap + to add your first card"
                     )
                 } else {
-                    TabView {
-                        ForEach(cards) { card in
-                            CardSummaryView(card: card)
-                                .onTapGesture { selectedCard = card }
+                    GeometryReader { proxy in
+                        TabView {
+                            ForEach(cards) { card in
+                                CardSummaryView(card: card, isRecommended: card.id == recommendedCardID)
+                                    .frame(width: proxy.size.width * 0.85)
+                                    .padding(.trailing, 16)
+                                    .onTapGesture { selectedCard = card }
+                            }
+                            AddCardPlaceholder()
+                                .frame(width: proxy.size.width * 0.85)
+                                .padding(.trailing, 16)
+                                .onTapGesture { showingAddSheet = true }
                         }
-                        AddCardPlaceholder()
-                            .onTapGesture { showingAddSheet = true }
+                        .tabViewStyle(.page(indexDisplayMode: .automatic))
                     }
-                    .tabViewStyle(.page(indexDisplayMode: .automatic))
-                    .frame(height: 220)
+                    .frame(height: 240)
                 }
 
                 Spacer()
@@ -54,9 +63,21 @@ struct CardsTabView: View {
 
 private struct CardSummaryView: View {
     let card: CreditCardAccount
+    let isRecommended: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                if isRecommended {
+                    Label("Use first", systemImage: "star.fill")
+                        .font(.caption)
+                        .padding(.vertical, 4)
+                        .padding(.horizontal, 8)
+                        .background(Color.yellow.opacity(0.2))
+                        .clipShape(Capsule())
+                }
+                Spacer()
+            }
             HStack {
                 VStack(alignment: .leading) {
                     Text(card.displayName)
