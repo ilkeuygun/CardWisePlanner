@@ -30,6 +30,9 @@
 		3D0B20D22C2CFA5A00F05D4D /* CreditCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B20D22C2CFA5A00F05D4D /* CreditCardAccount.swift */; };
 		3D0B20D32C2CFA5A00F05D4D /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B20D32C2CFA5A00F05D4D /* CardRepository.swift */; };
 		3D0B20D42C2CFA5A00F05D4D /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B20D42C2CFA5A00F05D4D /* PreviewData.swift */; };
+		1EBEDF4D2ECAA9F10058EA4F /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4C2ECAA9F10058EA4F /* CalendarMonthView.swift */; };
+		1EBEDF4E2ECAA4EB0058EA4F /* InsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4A2ECAA4EB0058EA4F /* InsightsViewModel.swift */; };
+		1EBEDF4F2ECAA4EB0058EA4F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBEDF4B2ECAA4EB0058EA4F /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,7 @@
 		1E0362042ECA956200EBAE6F /* HolidayCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCalendarService.swift; sourceTree = "<group>"; };
 		1E29477D2ECA939F00A12E1F /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		1EBEDF372ECA996D0058EA4F /* CalendarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabView.swift; sourceTree = "<group>"; };
+		1EBEDF4C2ECAA9F10058EA4F /* CalendarMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonthView.swift; sourceTree = "<group>"; };
 		1EBEDF392ECA997D0058EA4F /* AddCardSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSheet.swift; sourceTree = "<group>"; };
 		1EBEDF3A2ECA997D0058EA4F /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		1EBEDF3B2ECA997D0058EA4F /* CardsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTabView.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				1D0B10B12C2CFA5A00F05D4D /* CardWisePlannerApp.swift */,
 				1D0B10B22C2CFA5A00F05D4D /* ContentView.swift */,
 				1EAA10002ECB1ECB00703EAA /* Views */,
+			1EBEDF4902CAA4DE0058EA4F /* ViewModels */ ,
 				1EBEDF4902CAA4DE0058EA4F /* ViewModels */,
 				1D0B20C22C2CFA5A00F05D4D /* Data */,
 				1D0B10BA2C2CFA5A00F05D4D /* Info.plist */,
@@ -192,6 +197,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		1EBEDF4902CAA4DE0058EA4F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1EBEDF4A2ECAA4EB0058EA4F /* InsightsViewModel.swift */,
+				1EBEDF4B2ECAA4EB0058EA4F /* CalendarViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		1EAA10002ECB1ECB00703EAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				1EBEDF372ECA996D0058EA4F /* CalendarTabView.swift */,
+				1EBEDF4C2ECAA9F10058EA4F /* CalendarMonthView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -377,6 +392,9 @@
 				1EBEDF3C2ECA997D0058EA4F /* AddCardSheet.swift in Sources */,
 				1EBEDF3D2ECA997D0058EA4F /* CardDetailView.swift in Sources */,
 				1EBEDF3E2ECA997D0058EA4F /* CardsTabView.swift in Sources */,
+			1EBEDF4D2ECAA9F10058EA4F /* CalendarMonthView.swift in Sources */,
+			1EBEDF4E2ECAA4EB0058EA4F /* InsightsViewModel.swift in Sources */,
+			1EBEDF4F2ECAA4EB0058EA4F /* CalendarViewModel.swift in Sources */,
 				1EC134F42ECAA2B3002B2F70 /* CalendarViewModel.swift in Sources */,
 				1E0362062ECA956200EBAE6F /* APIClient.swift in Sources */,
 				1E0362072ECA956200EBAE6F /* CardOffersService.swift in Sources */,
