@@ -2,22 +2,14 @@ import SwiftUI
 
 struct CalendarTabView: View {
     @EnvironmentObject private var repository: CardRepository
-    @State private var holidays: [Holiday] = []
-    @State private var errorMessage: String?
-
-    private let holidayService = HolidayCalendarService()
-
-    private var events: [BillingEvent] {
-        repository.cards.flatMap { $0.events }
-            .sorted { $0.date < $1.date }
-    }
+    @StateObject private var viewModel = CalendarViewModel()
 
     var body: some View {
         NavigationStack {
             List {
-                if !events.isEmpty {
+                if !viewModel.events.isEmpty {
                     Section("Billing events") {
-                        ForEach(events) { event in
+                        ForEach(viewModel.events) { event in
                             VStack(alignment: .leading) {
                                 Text(event.type.displayName)
                                     .bold()
@@ -33,9 +25,9 @@ struct CalendarTabView: View {
                     }
                 }
 
-                if !holidays.isEmpty {
+                if !viewModel.holidays.isEmpty {
                     Section("Upcoming holidays") {
-                        ForEach(holidays.prefix(5)) { holiday in
+                        ForEach(viewModel.holidays.prefix(5)) { holiday in
                             VStack(alignment: .leading) {
                                 Text(holiday.localName).bold()
                                 Text(holiday.date)
@@ -45,7 +37,7 @@ struct CalendarTabView: View {
                     }
                 }
 
-                if let errorMessage {
+                if let errorMessage = viewModel.errorMessage {
                     Section {
                         Text(errorMessage)
                             .foregroundStyle(.red)
@@ -53,17 +45,17 @@ struct CalendarTabView: View {
                 }
             }
             .navigationTitle("Calendar")
-            .task { await loadHolidaysIfNeeded() }
+            .task { await refreshData() }
+            .onChange(of: repository.cards) { cards in
+                viewModel.updateCards(cards)
+            }
         }
     }
 
-    private func loadHolidaysIfNeeded() async {
-        guard holidays.isEmpty else { return }
-        do {
-            holidays = try await holidayService.fetchHolidays(countryCode: "US", year: Calendar.current.component(.year, from: Date()))
-        } catch {
-            errorMessage = error.localizedDescription
-        }
+    private func refreshData() async {
+        viewModel.updateCards(repository.cards)
+        let year = Calendar.current.component(.year, from: Date())
+        await viewModel.refreshHolidays(countryCode: "US", year: year)
     }
 }
 

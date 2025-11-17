@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct AddCardSheet: View {
-    @Environment(
-        \ .dismiss
-    ) private var dismiss
+    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var repository: CardRepository
 
     @State private var name = ""

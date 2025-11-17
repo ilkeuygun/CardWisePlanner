@@ -2,36 +2,39 @@ import SwiftUI
 
 struct InsightsTabView: View {
     @EnvironmentObject private var repository: CardRepository
-    @State private var offers: [CardOffer] = []
-    @State private var isLoadingOffers = false
-    @State private var errorMessage: String?
+    @StateObject private var viewModel = InsightsViewModel()
 
-    private let offersService = CardOffersService()
-
-    private var rankedCards: [CreditCardAccount] {
-        repository.cards.sorted { lhs, rhs in
-            lhs.daysUntilStatementClose() > rhs.daysUntilStatementClose()
-        }
+    private var baseCurrency: String {
+        repository.cards.first?.currencyCode ?? Locale.current.currency?.identifier ?? "USD"
     }
 
     var body: some View {
         NavigationStack {
             List {
+                if !viewModel.fxHighlights.isEmpty {
+                    Section("FX Snapshot") {
+                        ForEach(viewModel.fxHighlights, id: \.self) { highlight in
+                            Text(highlight)
+                                .font(.subheadline)
+                        }
+                    }
+                }
+
                 Section("Recommended order") {
-                    ForEach(rankedCards) { card in
+                    ForEach(viewModel.sortedCards) { card in
                         VStack(alignment: .leading) {
                             Text(card.displayName)
                                 .font(.headline)
-                            Text("Use for \(card.daysUntilStatementClose()) more days before statement closes")
+                            Text("Use for \(card.daysUntilStatementClose()) more days")
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
                         }
                     }
                 }
 
-                if !offers.isEmpty {
+                if !viewModel.offers.isEmpty {
                     Section("Offers & Tips") {
-                        ForEach(offers) { offer in
+                        ForEach(viewModel.offers) { offer in
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(offer.title).bold()
                                 Text(offer.description)
@@ -42,7 +45,7 @@ struct InsightsTabView: View {
                     }
                 }
 
-                if let errorMessage {
+                if let errorMessage = viewModel.errorMessage {
                     Section {
                         Text(errorMessage)
                             .foregroundStyle(.red)
@@ -50,21 +53,17 @@ struct InsightsTabView: View {
                 }
             }
             .navigationTitle("Insights")
-            .refreshable { await loadOffers() }
-            .task { await loadOffers() }
+            .refreshable { await viewModel.refresh(baseCurrency: baseCurrency) }
+            .task { await refreshViewModel() }
+            .onChange(of: repository.cards) { cards in
+                viewModel.updateCards(cards)
+            }
         }
     }
 
-    private func loadOffers() async {
-        guard !isLoadingOffers else { return }
-        isLoadingOffers = true
-        defer { isLoadingOffers = false }
-        do {
-            offers = try await offersService.fetchOffers()
-            errorMessage = nil
-        } catch {
-            errorMessage = error.localizedDescription
-        }
+    private func refreshViewModel() async {
+        viewModel.updateCards(repository.cards)
+        await viewModel.refresh(baseCurrency: baseCurrency)
     }
 }
 

@@ -4,6 +4,7 @@ struct CardDetailView: View {
     @EnvironmentObject private var repository: CardRepository
     let card: CreditCardAccount
     @State private var notes: String
+    @State private var saveError: String?
 
     init(card: CreditCardAccount) {
         self.card = card
@@ -13,44 +14,46 @@ struct CardDetailView: View {
     var body: some View {
         Form {
             Section("Overview") {
-                HStack {
-                    Text("Issuer")
-                    Spacer()
-                    Text(card.issuer)
-                        .foregroundStyle(.secondary)
-                }
-                HStack {
-                    Text("Network")
-                    Spacer()
-                    Text(card.network)
-                        .foregroundStyle(.secondary)
-                }
-                HStack {
-                    Text("Statement close")
-                    Spacer()
-                    Text("Day \(card.statementCloseDay)")
-                        .foregroundStyle(.secondary)
-                }
-                HStack {
-                    Text("Payment due")
-                    Spacer()
-                    Text("Day \(card.dueDay)")
-                        .foregroundStyle(.secondary)
-                }
+                infoRow(label: "Issuer", value: card.issuer)
+                infoRow(label: "Network", value: card.network)
+                infoRow(label: "Statement close", value: "Day \(card.statementCloseDay)")
+                infoRow(label: "Payment due", value: "Day \(card.dueDay)")
             }
 
             Section("Notes") {
                 TextEditor(text: $notes)
                     .frame(minHeight: 100)
             }
+
+            if let saveError {
+                Section {
+                    Text(saveError)
+                        .foregroundStyle(.red)
+                }
+            }
         }
         .navigationTitle(card.displayName)
         .toolbar {
-            Button("Save") {
-                try? repository.upsert(card) { card in
-                    card.notes = notes
-                }
+            Button("Save") { Task { await saveChanges() } }
+        }
+    }
+
+    private func infoRow(label: String, value: String) -> some View {
+        HStack {
+            Text(label)
+            Spacer()
+            Text(value).foregroundStyle(.secondary)
+        }
+    }
+
+    private func saveChanges() async {
+        do {
+            try repository.upsert(card) { card in
+                card.notes = notes
             }
+            saveError = nil
+        } catch {
+            saveError = error.localizedDescription
         }
     }
 }
